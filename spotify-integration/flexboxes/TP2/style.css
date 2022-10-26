@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 2em;
+    font-family: monospace;
+}
+
+.conteneur div{
+    padding: 20px 40px;
+}
+
+.conteneur{
+    height: 400px;
+    background-color: grey;
+    margin-bottom: 30px;
+    color: white;
+    display: flex;
+}
+
+
+.conteneur div:nth-child(1){
+    background-color: red;
+}
+
+.conteneur div:nth-child(2){
+    background-color: orange;
+}
+
+.conteneur div:nth-child(3){
+    background-color: green;
+}
+
+.conteneur div:nth-child(4){
+    background-color: blue;
+}
+
+.conteneur div:nth-child(5){
+    background-color: indigo;
+}
+
+.conteneur div:nth-child(6){
+    background-color: purple;
+}
+
+/*-------------------------------------*/
+/*EX1*/
+/*-------------------------------------*/
+
+#ex1{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*-------------------------------------*/
+/*EX2*/
+/*-------------------------------------*/
+
+#ex2{
+    flex-direction: row-reverse;
+}
+
+#ex2 div{
+    flex: 1;
+}
+
+#ex2 div:nth-child(2){
+    flex: 0.5;
+}
+
+
+/*-------------------------------------*/
+/*EX3*/
+/*-------------------------------------*/
+
+#ex3{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#ex3 div{
+    flex-basis: 25%;
+}
+
+/*-------------------------------------*/
+/*EX4*/
+/*-------------------------------------*/
+
+#ex4{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#ex4 div:nth-child(4){
+    order: -1;
+}
+
+/*-------------------------------------*/
+/*EX5*/
+/*-------------------------------------*/
+
+#ex5{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+#ex5 div{
+    width: calc(100%/6);
+}
+
+#ex5 div:nth-child(3n+1){
+    align-self: flex-start;
+}
+
+#ex5 div:nth-child(3n+2){
+    align-self: center;
+}
+
+#ex5 div:nth-child(3n+3){
+    align-self: flex-end;
+}
+
+/*-------------------------------------*/
+/*EX6*/
+/*-------------------------------------*/
+
+#ex6{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#ex6 div{
+    flex-basis: 25%;
+}
+
+#ex6 div:nth-child(1){
+    flex-basis: 50%;
+}
+
+#ex6 div:nth-child(4),
+#ex6 div:nth-child(5),
+#ex6 div:nth-child(6){
+    flex-basis: calc(50%/3);
+}
